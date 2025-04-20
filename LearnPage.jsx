@@ -20,7 +20,7 @@ export default function LearnPage() {
   const navigate = useNavigate();
   return (
     <div className="page learn">
-      <h2>Learning: {categoryId}</h2>
+      <h2>Category: {categoryId}</h2>
       <div className="words">
         {words.map((w, i) => (
           <div key={i} className="word">
