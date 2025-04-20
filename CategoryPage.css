@@ -1,0 +1,16 @@
+.page.category {
+    background-color: #60a917;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .lesson-buttons button {
+    background: #8fd121;
+    border: none;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+  }

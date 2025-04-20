@@ -1,0 +1,25 @@
+.page.learn {
+    background-color: #60a917;
+    padding: 2rem;
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+  }
+  
+  .words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .word {
+    background: #a8e61d;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 200px;
+  }
+  
+  .actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }

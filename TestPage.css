@@ -1,0 +1,18 @@
+.page.test {
+    background-color: #60a917;
+    padding: 2rem;
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+  }
+  
+  .question-block {
+    background-color: #a8e61d;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin: 0.3rem 0;
+  }
