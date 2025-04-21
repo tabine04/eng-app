@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
-import CategoryPage from "./components/CategoryPage";
+import TopicList from "./components/TopicList";
 import LearnPage from "./components/LearnPage";
 import TestPage from "./components/TestPage";
 import Flashcard from "./components/Flashcard";
@@ -17,7 +17,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/category/:id" element={<CategoryPage />} />
+        <Route path="/category/:id" element={<TopicList />} />
         <Route path="/learn/:categoryId" element={<LearnPage />} />
         <Route path="/flashcard/:categoryId" element={<Flashcard />} />
         <Route path="/test/:categoryId" element={<TestPage />} />
