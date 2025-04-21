@@ -1,0 +1,65 @@
+.page.category {
+  background-color: #60a917;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.page.category h2 {
+  font-size: 1.8rem;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.page.category h2 img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.lesson-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 600px;
+  justify-items: center;
+}
+
+.lesson-buttons button {
+  background: #a8e61d;
+  border: none;
+  padding: 1rem;
+  border-radius: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 100%;
+  max-width: 150px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #295a01;
+  padding: 1rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.footer-icons img {
+  width: 48px;
+  height: 48px;
+}
