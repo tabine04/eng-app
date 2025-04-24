@@ -4,6 +4,7 @@
   min-height: 100vh;
   font-family: Helvetica, sans-serif;
   position: relative;
+  padding-bottom: 80px; /* Thêm khoảng trống cho footer */
 }
 
 /* Sidebar */
@@ -134,13 +135,15 @@
 
 /* Footer */
 .footer-icons {
-  position: absolute;
+  position: fixed; /* đổi từ absolute sang fixed */
   bottom: 0;
-  width: 100%;
+  left: 0;
+  width: 100%; /* chiếm toàn bộ chiều rộng */
   background-color: #1d3b00;
   padding: 1rem;
   display: flex;
   justify-content: space-around;
+  z-index: 10;
 }
 
 .footer-icons img {
