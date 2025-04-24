@@ -12,10 +12,10 @@ export default function HomePage() {
           <img src="/icons/home.png" alt="Home" />
           Home
         </button>
-        <button className="menu-item">
-          <img src="/icons/library.png" alt="Library" />
-          Your library
-        </button>
+        <button className="menu-item" onClick={() => navigate("/library")}>
+  <img src="/icons/library.png" alt="Library" />
+  Your library
+</button>
         <button className="menu-item" onClick={() => navigate("/category/Furniture")}>
   <img src="/icons/categories.png" alt="Categories" />
   Categories
