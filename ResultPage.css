@@ -3,11 +3,116 @@
     padding: 2rem;
     font-family: Helvetica, sans-serif;
     min-height: 100vh;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  blockquote {
+  .page.result h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    color: #ffd700;
+  }
+  
+  .page.result blockquote {
     background: #a8e61d;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-top: 1rem;
+    max-width: 400px;
+    color: white;
+    font-style: italic;
   }
+
+  .result-box {
+    background: #f7f6bb;
+    color: black;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 4px 4px 0 black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .window-buttons {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .window-buttons .btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+  }
+  
+  .score-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+  }
+  
+  .result-message {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: black;
+    text-align: center;
+  }
+  
+  .result-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  
+  .retry-button {
+    padding: 0.7rem 1.5rem;
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    font-weight: bold;
+    border-radius: 0;
+    cursor: pointer;
+  }
+  
+  .retry-button:hover {
+    opacity: 0.85;
+  }  
+
+  /* Footer */
+.footer-icons {
+  position: fixed; /* đổi từ absolute sang fixed */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* chiếm toàn bộ chiều rộng */
+  background-color: #1d3b00;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  z-index: 10;
+}
+
+.footer-icons img {
+  width: 50px;
+  height: 50px;
+}
+  
+  
