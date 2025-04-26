@@ -4,11 +4,19 @@ import "../styles/LoginPage.css";
 export default function LoginPage() {
   return (
     <div className="page login">
-      <h2>Log in</h2>
-      <input type="text" placeholder="Username" />
-      <input type="password" placeholder="Password" />
-      <button>Log In</button>
-      <p>Don't have an account? Sign up!</p>
+      <div className="header">
+      <a href="/" className="back-button">← Back to Home</a>
+        <h1><b>Log in</b></h1>
+        <img src="/image/A.png" alt="Logo" className="logoo" />
+      </div>
+      <div className="login-box">
+        <input type="text" placeholder="Username / Email" className="input-field" />
+        <input type="password" placeholder="Password" className="input-field" />
+        <button className="login-button"><b>Log in</b></button>
+        <a href="/signup" className="signup-link">
+        Don't have an account? Sign up!
+        </a>
+      </div>
     </div>
   );
 }
