@@ -7,81 +7,6 @@
   width:100%;
 }
 
-/*menufixedfixed*/
-.menu-label {
-  color: #ccc;
-  margin-bottom: 1rem;
-  font-size: 14px;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: none;
-  background: #a8e61d;
-  border-radius: 12px;
-  padding: 0.8rem;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.menu-item img {
-  width: 20px;
-  height: 20px;
-}
-
-.menu-toggle {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  font-size: 24px;
-  color: white;
-  background-color: #477d11;
-  border-radius: 10px;
-  padding: 8px 12px;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.menu-wrapper {
-margin-left:20px;
-margin-top: 80px;
-}
-
-.menu-bar {
-  width: 130px;
-  background-color: #7ec700;
-  padding: 1rem;
-  border-radius: 20px;
-  font-family: Helvetica, sans-serif;
-}
-
-.menu-bar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-bar li {
-  margin: 1rem 0;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-}
-
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-
 /* Main content */
 .main-content {
   flex: 1;
@@ -132,8 +57,8 @@ margin-top: 80px;
 .hero-section {
   display: flex;
   gap: 1.5rem;
-  padding: 20px;
-
+  padding: 30px;
+ margin: 0px 160px ;
 }
 
 .hero-big-box {
@@ -163,16 +88,20 @@ margin-top: 80px;
 
 /* Session section *//* fixxed */
 .section-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #ffd700;
+  color: #fccd2a;
+  margin: 0px 150px ;
+
 }
 
 .sessions {
   display: flex;
   gap: 1rem;
-  padding: 20px;
-  margin-bottom: 50px; /*thêm vì chưa sửa footer*/
+  padding: 30px;
+  margin-bottom: 50px; 
+  margin: 0px 160px ;
+
 
 }
 
