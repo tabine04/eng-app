@@ -11,7 +11,7 @@
 .question-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: 2rem;
   justify-items: center;
 }
@@ -25,6 +25,15 @@
   box-sizing: border-box;
   text-align: left;
   justify-items: start;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+/* Đây là phần thêm để dịch 2 cột */
+.question-grid > .question-block:nth-child(odd) {
+  margin-left: 18rem; /* cột bên trái đẩy qua phải */
+}
+
+.question-grid > .question-block:nth-child(even) {
+  margin-right: 18rem; /* cột bên phải đẩy qua trái */
 }
 
 h2{
@@ -54,11 +63,13 @@ h2{
 .page.test button {
   background: #f7d202;
   border: none;
-  padding: 0.7rem 1.2rem;
+  padding: 1rem 1.5rem;
   border-radius: 10px;
   margin-top: 1.5rem;
   font-weight: bold;
+  font-size: large;
   cursor: pointer;
+  box-shadow:  3px 3px 3px rgba(0,0,0,0.3);
 }
 
 .sidebar {
@@ -143,69 +154,6 @@ h2{
   height: 35px;
   background-color: black;
   border-radius: 50%;
-}
-
-.menu-toggle {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  font-size: 24px;
-  color: white;
-  background-color: #477d11;
-  border-radius: 10px;
-  padding: 8px 12px;
-  cursor: pointer;
-  z-index: 101;
-}
-
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 100;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.menu-wrapper {
-  margin: 20px;
-  animation: slideIn 0.2s ease-out;
-}
-
-.menu-bar {
-  width: 180px;
-  background-color: #7ec700;
-  padding: 1rem;
-  border-radius: 20px;
-  font-family: Helvetica, sans-serif;
-}
-
-.menu-bar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-bar li {
-  margin: 1rem 0;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 
