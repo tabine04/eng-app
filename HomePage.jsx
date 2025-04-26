@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/HomePage.css";
+import MenuBar from "./MenuBar";
 
 export default function HomePage() {
   const navigate = useNavigate();
   const { categoryId } = useParams();
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="homepage-container">
       {/* ☰ Toggle menu icon */}
@@ -13,25 +15,12 @@ export default function HomePage() {
         ☰
       </div>
 
-     
       {/* Menu Overlay */}
-      {menuOpen && (
-        <div className="menu-overlay" onClick={() => setMenuOpen(false)}>
-          <div className="menu-wrapper" onClick={(e) => e.stopPropagation()}>
-            <div className="menu-bar">
-              <ul>
-                <li onClick={() => { navigate("/"); setMenuOpen(false); }}>🏠 Home</li>
-                <li onClick={() => { navigate("/library"); setMenuOpen(false); }}>📚 Your library</li>
-                <li onClick={() => { navigate(`/category/${categoryId}`); setMenuOpen(false); }}>📂 Categories</li>
-              </ul>
-            </div>
-          </div>
-        </div>)}
-
+      {menuOpen && <MenuBar />}
+      
       <div className="main-content">
         <div className="topbar">
           <input type="text" placeholder="Search..." className="search-bar" />
-          <button className="add-button">＋</button>
           <div className="avatar" onClick={() => navigate("/login")}></div>
           </div>
 
