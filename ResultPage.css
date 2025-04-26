@@ -34,7 +34,7 @@
     padding: 2rem;
     width: 100%;
     max-width: 500px;
-    box-shadow: 4px 4px 0 black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -82,14 +82,55 @@
     gap: 1rem;
   }
   
+  .answer-summary {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .answer-column {
+    flex: 1;
+    min-width: 300px;
+    background: #60a917;
+    padding: 1rem;
+    border-radius: 10px;
+    }
+  
+  .answer-column h3 {
+    color: #1d3b00;
+    margin-bottom: 1rem;
+  }
+  
+  .answer-card {
+    background: #f7f6bb;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: black;
+  }
+  
+  .correct {
+    border-left: 5px solid green;
+  }
+  
+  .wrong {
+    border-left: 5px solid red;
+  }
+  
   
   .retry-button {
     padding: 0.7rem 1.5rem;
-    background: transparent;
+    background: #ffd700;
     border: 2px solid black;
     color: black;
     font-weight: bold;
-    border-radius: 0;
+    border-radius: 10px;
     cursor: pointer;
   }
   
