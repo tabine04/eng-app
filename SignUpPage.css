@@ -1,8 +1,82 @@
-.page.signup {
-    background-color: #60a917;
-    padding: 2rem;
-    font-family: Helvetica, sans-serif;
+ .page.signup {
+    background-color: #C0EBA6; /* Màu nền */
+    display: flex;
+    flex-direction: column; /* Xếp theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
     min-height: 100vh;
-    text-align: center;
+  }
+  .back-button {
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 10px; /* Khoảng cách từ trên cùng */
+    left: 10px; /* Khoảng cách từ bên trái */
+    font-size: 15px; /* Kích thước chữ */
+    color: #000000; /* Màu chữ */
+    text-decoration: none; /* Bỏ gạch chân */
   }
   
+  .back-button:hover {
+    text-decoration: underline; /* Thêm gạch chân khi hover */
+  }
+  .header {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center; /* Căn giữa tiêu đề và logo */
+    margin-left: 20px;
+  }
+  
+  .logoo {
+    width: 100px; /* Kích thước của logo */
+    height: 100px; /* Kích thước của logo */
+    margin-left: 20px; /* Khoảng cách giữa logo và tiêu đề */
+    
+  }
+  
+  .signup-box {
+    background-color: #347928; /* Màu nền của box */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 400px; /* Kích thước box */
+    margin-bottom: 200px;
+  }
+  
+  .input-field {
+    background-color: #FFFBE6; /* Màu nền của box */
+    margin: 0.5rem 0; /* Khoảng cách giữa các input */
+    padding: 1rem 2rem; /* Tăng kích thước padding */
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .signup-button {
+    padding: 1rem ; /* Giảm kích thước padding cho button */
+    font-size: 18px; /* Tăng kích thước chữ */
+    margin-top: 1rem; /* Khoảng cách trên button */
+    background-color: #fccd2a; /* Màu nền của button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 40%; /* Đặt chiều rộng của button tự động */
+    
+  }
+  
+  .login-link {
+    margin-top: 1rem; /* Khoảng cách giữa button và đoạn văn */
+    padding: 0.1rem 0.5rem; /* Giảm kích thước padding cho button */
+    text-decoration: underline; /* Thêm đường gạch chân */
+    color: #ffffff; /* Màu chữ */
+    cursor: pointer; /* Con trỏ khi di chuột */
+    display: inline-block; /* Để margin-top có hiệu lực */
+    
+  }
+  .login-link:hover {
+    color: rgb(145, 145, 255); /* Đổi màu chữ thành xanh khi hover */
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
