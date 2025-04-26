@@ -1,33 +1,38 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import "../styles/HomePage.css";
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const { categoryId } = useParams();
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="homepage-container">
-      <div className="sidebar">
-        <div className="menu-label">☰ Menu</div>
-        <button className="menu-item">
-          <img src="/icons/home.png" alt="Home" />
-          Home
-        </button>
-        <button className="menu-item" onClick={() => navigate("/library")}>
-  <img src="/icons/library.png" alt="Library" />
-  Your library
-</button>
-        <button className="menu-item" onClick={() => navigate("/category/Furniture")}>
-  <img src="/icons/categories.png" alt="Categories" />
-  Categories
-</button>
+      {/* ☰ Toggle menu icon */}
+      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
       </div>
+
+      {/* Menu Overlay */}
+      {menuOpen && (
+        <div className="menu-overlay" onClick={() => setMenuOpen(false)}>
+          <div className="menu-wrapper" onClick={(e) => e.stopPropagation()}>
+            <div className="menu-bar">
+              <ul>
+                <li onClick={() => { navigate("/"); setMenuOpen(false); }}>🏠 Home</li>
+                <li onClick={() => { navigate("/library"); setMenuOpen(false); }}>📚 Your library</li>
+                <li onClick={() => { navigate(`/category/${categoryId}`); setMenuOpen(false); }}>📂 Categories</li>
+              </ul>
+            </div>
+          </div>
+        </div>)}
 
       <div className="main-content">
         <div className="topbar">
           <input type="text" placeholder="Search..." className="search-bar" />
           <button className="add-button">＋</button>
-          <div className="avatar"></div>
-        </div>
+          <div className="avatar" onClick={() => navigate("/login")}></div>
+          </div>
 
         <div className="hero-section">
           <div className="hero-big-box"></div>
