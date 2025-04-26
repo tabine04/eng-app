@@ -17,6 +17,7 @@
   cursor: pointer;
 }
 
+
 .menu-item img {
   width: 20px;
   height: 20px;
@@ -25,8 +26,7 @@
 .menu-toggle {
   position: fixed;
   top: 16px;
-  left: 16px;
-  font-size: 24px;
+  left: 20px;
   color: white;
   background-color: #477d11;
   border-radius: 10px;
@@ -37,14 +37,14 @@
 
 .menu-wrapper {
 margin-left:20px;
-margin-top: 80px;
+margin-top: 70px;
 }
 
 .menu-bar {
   width: 130px;
-  background-color: #7ec700;
+  background-color: #477d11;
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 15px;
   font-family: Helvetica, sans-serif;
 }
 
@@ -55,11 +55,18 @@ margin-top: 80px;
 }
 
 .menu-bar li {
-  margin: 1rem 0;
+  margin: 1rem 0px;
   cursor: pointer;
   color: white;
   font-weight: bold;
+  font-size: 15px;
+  border-radius: 5px;
+padding: 3px 7px;
 }
+
+.menu-bar li:hover {
+  background-color: #b0eca6b7;
+} 
 
 .menu-overlay {
   position: fixed;
@@ -71,3 +78,4 @@ margin-top: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;}
+
