@@ -7,20 +7,7 @@
   width:100%;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 100px;
-  background-color: #477d11;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-}
-
+/*menufixedfixed*/
 .menu-label {
   color: #ccc;
   margin-bottom: 1rem;
@@ -55,11 +42,10 @@
   border-radius: 10px;
   padding: 8px 12px;
   cursor: pointer;
-  z-index: 101;
+  z-index: 100;
 }
 
 .menu-wrapper {
-  margin:50px;
 margin-left:20px;
 margin-top: 80px;
 }
@@ -84,6 +70,17 @@ margin-top: 80px;
   color: white;
   font-weight: bold;
 }
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 
 /* Main content */
 .main-content {
