@@ -1,29 +1,37 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/HomePage.css";
-import MenuBar from "./MenuBar";
+import TopBar from "./TopBar";
+
 
 export default function HomePage() {
   const navigate = useNavigate();
   const { categoryId } = useParams();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isNotificationVisible, setNotificationVisible] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(""); // 🌟 thêm state
+
+  const showNotification = () => {
+    setNotificationVisible(true);
+    setTimeout(() => {
+      setNotificationVisible(false);
+    }, 15000);
+  };
+
+  const hideNotification = () => {
+    setNotificationVisible(false);
+  };
+
+  // 🌟 Check nếu search term chứa "furn"
+  const shouldShowFurniture = searchTerm.toLowerCase().includes("furn");
 
   return (
     <div className="homepage-container">
-      {/* ☰ Toggle menu icon */}
-      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
-      </div>
+         <TopBar />
 
-      {/* Menu Overlay */}
-      {menuOpen && <MenuBar />}
-      
       <div className="main-content">
-        <div className="topbar">
-          <input type="text" placeholder="Search..." className="search-bar" />
-          <div className="avatar" onClick={() => navigate("/login")}></div>
-          </div>
 
+        {/* Hero section */}
         <div className="hero-section">
           <div className="hero-big-box"></div>
           <div className="hero-small-boxes">
