@@ -98,26 +98,28 @@ export default function Flashcard() {
         ) : (
           <button
             className="finish-button"
-            onClick={showNotification} // ✅ Sửa lại nClick thành onClick
+            onClick={showNotification}
           >
             Finish
           </button>
         )}
       </div>
 
-      {/* Notification popup */}
+      {/* Notification Overlay */}
       {isNotificationVisible && (
-        <div className="notification-box">
-          <button className="close-button" onClick={hideNotification}>x</button>
-          <div className="notification-content">
-            <p>Congratulations! You have finished this lesson.</p>
-            <img src="/images/smiskithanhcong.png" alt="Success" />
-            <button 
-              className="try-test-button" 
-              onClick={() => navigate(`/test/${categoryId}`)}
-            >
-              Take a test
-            </button>
+        <div className="notification-overlay" onClick={hideNotification}>
+          <div className="notification-box" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={hideNotification}>x</button>
+            <div className="notification-content">
+              <p>Congratulations! You have finished this lesson.</p>
+              <img src="/images/smiskithanhcong.png" alt="Success" />
+              <button 
+                className="try-test-button" 
+                onClick={() => navigate(`/test/${categoryId}`)}
+              >
+                Take a test
+              </button>
+            </div>
           </div>
         </div>
       )}
