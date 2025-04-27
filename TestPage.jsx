@@ -2,12 +2,12 @@ import React, { useState, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import words from "../words";
 import "../styles/TestPage.css";
+import TopBar from "./TopBar"; // 🌟 Thêm TopBar
 
 export default function TestPage() {
   const { categoryId } = useParams();
   const navigate = useNavigate();
   const [answers, setAnswers] = useState({});
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const questions = useMemo(() => {
     return words.map((word) => {
@@ -51,25 +51,7 @@ export default function TestPage() {
 
   return (
     <div className="test-page">
-      {/* ☰ Toggle menu icon */}
-      <div className="test-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
-      </div>
-
-      {/* Menu Overlay */}
-      {menuOpen && (
-        <div className="test-menu-overlay" onClick={() => setMenuOpen(false)}>
-          <div className="test-menu-wrapper" onClick={(e) => e.stopPropagation()}>
-            <div className="test-menu-bar">
-              <ul>
-                <li onClick={() => { navigate("/"); setMenuOpen(false); }}>🏠 Home</li>
-                <li onClick={() => { navigate("/library"); setMenuOpen(false); }}>📚 Your library</li>
-                <li onClick={() => { navigate(`/category/${categoryId}`); setMenuOpen(false); }}>📂 Categories</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      )}
+      <TopBar /> {/* 🌟 Thêm TopBar lên đầu */}
 
       <h2>Test - {categoryId}</h2>
 
