@@ -1,13 +1,20 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../styles/LearnPage.css";
+import BackButton from "./BackButton";
 
+// Đảm bảo có đúng 10 từ vựng để hiển thị 2 hàng mỗi hàng 5 từ
 const words = [
   { word: "Chair", phonetic: "/ʧɛər/", synonym: "Seat", antonym: "Stand" },
   { word: "Table", phonetic: "/ˈteɪ.bəl/", synonym: "Desk", antonym: "Floor" },
   { word: "Lamp", phonetic: "/læmp/", synonym: "Light", antonym: "Dark" },
   { word: "Sofa", phonetic: "/ˈsəʊ.fə/", synonym: "Couch", antonym: "Stool" },
-  { word: "Curtain", phonetic: "/ˈkɜː.tən/", synonym: "Drape", antonym: "Window" },
+  {
+    word: "Curtain",
+    phonetic: "/ˈkɜː.tən/",
+    synonym: "Drape",
+    antonym: "Window",
+  },
   { word: "Carpet", phonetic: "/ˈkɑː.pɪt/", synonym: "Rug", antonym: "Floor" },
   { word: "Drawer", phonetic: "/drɔːr/", synonym: "Cabinet", antonym: "Shelf" },
   { word: "Mirror", phonetic: "/ˈmɪr.ər/", synonym: "Glass", antonym: "Wall" },
@@ -20,6 +27,11 @@ export default function LearnPage() {
   const navigate = useNavigate();
   return (
     <div className="page learn">
+      {/* BackButton at top */}
+      <div className="back-button-container">
+        <BackButton />
+      </div>
+
       <h2>Category: {categoryId}</h2>
       <div className="words">
         {words.map((w, i) => (
@@ -32,10 +44,42 @@ export default function LearnPage() {
         ))}
       </div>
       <div className="actions">
-        <button onClick={() => navigate(`/flashcard/${categoryId}`)}>Flashcards</button>
-        <button onClick={() => navigate(`/result/${categoryId}`)}>Done</button>
-        <button onClick={() => navigate(`/test/${categoryId}`)}>Take Test</button>
+        <button onClick={() => navigate(`/flashcard/${categoryId}`)}>
+          Flashcards
+        </button>
+        <button onClick={() => navigate(`/test/${categoryId}`)}>
+          Take Test
+        </button>
       </div>
+
+      {/* Thêm footer với các icon */}
+      <footer className="footer-icons">
+        <img
+          src="/images/smiski fitness.jpeg"
+          alt="character1"
+          className="character"
+        />
+        <img
+          src="/images/smiski icon.jpeg"
+          alt="character2"
+          className="character"
+        />
+        <img
+          src="/images/smiski resting.jpeg"
+          alt="character3"
+          className="character"
+        />
+        <img
+          src="/images/smiski trumpet.jpeg"
+          alt="character4"
+          className="character"
+        />
+        <img
+          src="/images/smiski laptop.jpeg"
+          alt="character5"
+          className="character"
+        />
+      </footer>
     </div>
   );
 }
