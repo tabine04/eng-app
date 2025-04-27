@@ -9,6 +9,7 @@ export default function TopBar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isNotificationVisible, setNotificationVisible] = useState(false);
   const shouldShowFurniture = searchTerm.toLowerCase().includes("furn");
+  
   const showNotification = () => {
     setNotificationVisible(true);
     setTimeout(() => {
@@ -39,6 +40,19 @@ export default function TopBar() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
+          
+          {/* Di chuyển search result box vào trong search-area để đảm bảo vị trí */}
+          {shouldShowFurniture && (
+            <div className="search-result-box">
+              <span className="search-category-name">Furniture</span>
+              <button
+                className="search-learn-button"
+                onClick={() => navigate(`/category/furniture`)}
+              >
+                Learn
+              </button>
+            </div>
+          )}
         </div>
 
         <button className="logout" onClick={showNotification}>
@@ -53,19 +67,6 @@ export default function TopBar() {
               <p>Do you really want to logout?</p>
               <a href="/" className="logout-button">Log out</a>
             </div>
-          </div>
-        )}
-
-         {/* 🌟 Suggestion Box */}
-         {shouldShowFurniture && (
-          <div className="search-result-box">
-            <span className="search-category-name">Furniture</span>
-            <button
-              className="search-learn-button"
-              onClick={() => navigate(`/category/furniture`)}
-            >
-              Learn
-            </button>
           </div>
         )}
       </div>
