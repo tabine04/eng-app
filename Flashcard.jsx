@@ -9,8 +9,20 @@ export default function Flashcard() {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isNotificationVisible, setNotificationVisible] = useState(false);
 
   const word = words[index];
+
+  const showNotification = () => {
+    setNotificationVisible(true);
+    setTimeout(() => {
+      setNotificationVisible(false);
+    }, 15000); // Tự động ẩn sau 15 giây
+  };
+
+  const hideNotification = () => {
+    setNotificationVisible(false);
+  };
 
   return (
     <div className="page flashcard">
@@ -54,42 +66,61 @@ export default function Flashcard() {
       </div>
 
       {/* Progress bar */}
-<div className="progress-bar">
-  <div
-    className="progress-fill"
-    style={{ width: `${((index + 1) / words.length) * 100}%` }}
-  ></div>
-</div>
-      {/* Navigation */}
-      <div className="navigation-buttons">
-  {index > 0 && (
-    <button
-      onClick={() => {
-        setFlipped(false);
-        setIndex(index - 1);
-      }}
-    >
-      Previous
-    </button>
-  )}
+      <div className="progress-bar">
+        <div
+          className="progress-fill"
+          style={{ width: `${((index + 1) / words.length) * 100}%` }}
+        ></div>
+      </div>
 
-  {index < words.length - 1 ? (
-    <button
-      onClick={() => {
-        setFlipped(false);
-        setIndex(index + 1);
-      }}
-    >
-      Next
-    </button>
-  ) : (
-    <button
-      className="finish-button"
-    > 
-    Finish
-    </button>
-  )}
-</div>
+      {/* Navigation buttons */}
+      <div className="navigation-buttons">
+        {index > 0 && (
+          <button
+            onClick={() => {
+              setFlipped(false);
+              setIndex(index - 1);
+            }}
+          >
+            Previous
+          </button>
+        )}
+
+        {index < words.length - 1 ? (
+          <button
+            onClick={() => {
+              setFlipped(false);
+              setIndex(index + 1);
+            }}
+          >
+            Next
+          </button>
+        ) : (
+          <button
+            className="finish-button"
+            onClick={showNotification} // ✅ Sửa lại nClick thành onClick
+          >
+            Finish
+          </button>
+        )}
+      </div>
+
+      {/* Notification popup */}
+      {isNotificationVisible && (
+        <div className="notification-box">
+          <button className="close-button" onClick={hideNotification}>x</button>
+          <div className="notification-content">
+            <p>Congratulations! You have finished this lesson.</p>
+            <img src="/images/smiskithanhcong.png" alt="Success" />
+            <button 
+              className="try-test-button" 
+              onClick={() => navigate(`/test/${categoryId}`)}
+            >
+              Take a test
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <div className="footer-icons">
