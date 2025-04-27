@@ -33,7 +33,6 @@ export default function TestPage() {
       return acc + (answers[i] === q.correct ? 1 : 0);
     }, 0);
 
-    // Tạo mảng chi tiết từng câu
     const details = questions.map((q, i) => ({
       question: q.question,
       selectedAnswer: answers[i] || "No answer",
@@ -45,23 +44,23 @@ export default function TestPage() {
       state: {
         total: questions.length,
         correct: correctCount,
-        details: details, // ✅ gửi thêm chi tiết từng câu
+        details: details,
       },
     });
   };
 
   return (
-    <div className="page test">
+    <div className="test-page">
       {/* ☰ Toggle menu icon */}
-      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+      <div className="test-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
       </div>
 
       {/* Menu Overlay */}
       {menuOpen && (
-        <div className="menu-overlay" onClick={() => setMenuOpen(false)}>
-          <div className="menu-wrapper" onClick={(e) => e.stopPropagation()}>
-            <div className="menu-bar">
+        <div className="test-menu-overlay" onClick={() => setMenuOpen(false)}>
+          <div className="test-menu-wrapper" onClick={(e) => e.stopPropagation()}>
+            <div className="test-menu-bar">
               <ul>
                 <li onClick={() => { navigate("/"); setMenuOpen(false); }}>🏠 Home</li>
                 <li onClick={() => { navigate("/library"); setMenuOpen(false); }}>📚 Your library</li>
@@ -74,15 +73,15 @@ export default function TestPage() {
 
       <h2>Test - {categoryId}</h2>
 
-      <div className="question-grid">
+      <div className="test-question-grid">
         {questions.map((q, i) => (
-          <div key={i} className="question-block">
+          <div key={i} className="test-question-block">
             <p>{q.question}</p>
-            <div className="options">
+            <div className="test-options">
               {q.options.map((opt) => (
-                <label key={opt} className="answer-option">
+                <label key={opt} className="test-answer-option">
                   <input
-                    className="answer-option-input"
+                    className="test-answer-option-input"
                     type="radio"
                     name={`q${i}`}
                     checked={answers[i] === opt}
@@ -96,9 +95,9 @@ export default function TestPage() {
         ))}
       </div>
 
-      <button onClick={handleSubmit}>Submit</button>
+      <button className="test-submit-button" onClick={handleSubmit}>Submit</button>
 
-      <div className="footer-icons">
+      <div className="test-footer-icons">
         <img src="/images/smiski fitness.jpeg" alt="char1" />
         <img src="/images/smiski icon.jpeg" alt="char2" />
         <img src="/images/smiski resting.jpeg" alt="char3" />
