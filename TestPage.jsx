@@ -33,10 +33,19 @@ export default function TestPage() {
       return acc + (answers[i] === q.correct ? 1 : 0);
     }, 0);
 
+    // Tạo mảng chi tiết từng câu
+    const details = questions.map((q, i) => ({
+      question: q.question,
+      selectedAnswer: answers[i] || "No answer",
+      correctAnswer: q.correct,
+      isCorrect: answers[i] === q.correct,
+    }));
+
     navigate(`/result/${categoryId}`, {
       state: {
         total: questions.length,
         correct: correctCount,
+        details: details, // ✅ gửi thêm chi tiết từng câu
       },
     });
   };
@@ -72,7 +81,8 @@ export default function TestPage() {
             <div className="options">
               {q.options.map((opt) => (
                 <label key={opt} className="answer-option">
-                  <input className="anser-option-input"
+                  <input
+                    className="answer-option-input"
                     type="radio"
                     name={`q${i}`}
                     checked={answers[i] === opt}
