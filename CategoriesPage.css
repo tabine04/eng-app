@@ -48,7 +48,7 @@
 
 /* Styling cho mỗi button category */
 .category-button {
-  background: #f7f6bb;
+  background: #f7fbb6;
   border: none;
   border-radius: 15px;
   padding: 15px;
@@ -60,6 +60,7 @@
   transition: all 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   height: 200px; /* Tăng chiều cao cho button */
+  position: relative; /* Thêm position relative để có thể định vị nút Learn */
 }
 
 .category-button:hover {
@@ -90,8 +91,31 @@
   color: #295a01;
 }
 
+/* Styling cho nút Learn */
+.learn-button {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background-color: #295a01;
+  color: #fccd23;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  z-index: 5; /* Đảm bảo nút Learn hiển thị trên các phần tử khác */
+}
+
+.learn-button:hover {
+  background-color: #295a0169;
+  color: #295a01;
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 /* Styling cho footer */
-/* Sửa lại phần Styling cho footer trong CategoriesPage.css */
 .characters-footer {
   height: 70px;
   background-color: #295a01;
@@ -105,8 +129,6 @@
   left: 0;
   z-index: 10; /* Thêm z-index để đảm bảo footer hiển thị trên các phần tử khác */
 }
-
-/* Các phần còn lại của file CSS giữ nguyên */
 
 .character {
   height: 40px;
