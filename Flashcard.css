@@ -170,5 +170,52 @@ h2 {font-size: xx-large;}
   border-radius: 50%;
 }
 
+.notification-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #F7F6BB;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 100;
+}
+
+.notification-content {
+  text-align: center;
+  color: black;
+}
+
+.try-test-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: black;
+  border-radius: 5px;
+  color: white;
+  background-color: #1d3b00;
+  font-size: 18px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+
 
 
