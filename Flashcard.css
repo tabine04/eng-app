@@ -10,7 +10,7 @@
   color: white;
 }
 
-h2 {font-size: xx-large;}
+h2 { font-size: xx-large; }
 
 .card {
   background-color: #F7F6BB;
@@ -28,11 +28,6 @@ h2 {font-size: xx-large;}
   color: black;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
-}
-
-.card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
 }
 
 .progress-bar {
@@ -71,10 +66,10 @@ h2 {font-size: xx-large;}
 
 /* Footer */
 .footer-icons {
-  position: fixed; /* đổi từ absolute sang fixed */
+  position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%; /* chiếm toàn bộ chiều rộng */
+  width: 100%;
   background-color: #1d3b00;
   padding: 1rem;
   display: flex;
@@ -86,90 +81,8 @@ h2 {font-size: xx-large;}
   width: 50px;
   height: 50px;
 }
-.sidebar {
-  width: 160px;
-  background-color: #477d11;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-}
 
-.menu-label {
-  color: #ccc;
-  margin-bottom: 1rem;
-  font-size: 14px;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: none;
-  background: #a8e61d;
-  border-radius: 12px;
-  padding: 0.8rem;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.menu-item img {
-  width: 20px;
-  height: 20px;
-}
-
-.main-content {
-  margin-left: 180px;
-  width: calc(100% - 180px);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 12px;
-  margin-bottom: 1.5rem;
-  width: 100%;
-}
-
-.search-bar {
-  flex: 1;
-  max-width: 600px;
-  padding: 10px 15px;
-  border-radius: 12px;
-  border: none;
-  background-color: #fcfcda;
-  color: black;
-  font-size: 16px;
-  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
-}
-
-.add-button {
-  width: 35px;
-  height: 35px;
-  font-size: 20px;
-  border: 1px solid black;
-  border-radius: 6px;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.avatar {
-  width: 35px;
-  height: 35px;
-  background-color: black;
-  border-radius: 50%;
-}
-
+/* Notification */
 .notification-box {
   display: flex;
   flex-direction: column;
@@ -193,7 +106,6 @@ h2 {font-size: xx-large;}
 }
 
 .try-test-button {
-  display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
   background-color: #ffd700;
@@ -213,20 +125,18 @@ h2 {font-size: xx-large;}
   background-color: #1d3b00;
   font-size: 18px;
   cursor: pointer;
-  justify-content: center;
 }
 
+/* Overlay */
 .notification-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* nền mờ */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 99;
 }
-
-
