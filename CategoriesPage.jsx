@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/CategoriesPage.css";
-import TopBar from "./TopBar"; // Import TopBar
 import BackButton from "./BackButton"; // Import BackButton
 
 export default function CategoriesPage() {
@@ -13,9 +12,6 @@ export default function CategoriesPage() {
 
   return (
     <div className="categories-container">
-      {/* Use TopBar instead of custom header */}
-      <TopBar />
-
       {/* Add BackButton under TopBar */}
       <div className="back-button-container">
         <BackButton />
