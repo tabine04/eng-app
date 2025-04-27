@@ -1,0 +1,157 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🌟 căn giữa các cụm */
+  background-color: #477d11;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.topbar-left {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.search-area {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* 🌟 căn giữa search */
+}
+
+.search-bar {
+  width: 60%; /* 🌟 nhỏ lại, vừa giữa */
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f7f6bb;
+  color: black;
+  font-size: 16px;
+  flex: 1;
+  max-width: 600px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.logout {
+  margin-right: 30px;
+  background-color: #347928;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  color: #F7F6BB;
+  padding:0px 10px;
+  font-size: 15px;
+}
+
+.hpnotification-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: #f7f6bbbc;
+  background-size: cover;
+  background-blend-mode:soft-light;
+  border-radius: 10px;
+  padding: 40px;
+  z-index: 100;
+}
+
+.hpnotification-content {
+  text-align: center;
+  color: #347928;
+  font-weight: bolder;
+}
+
+.logout-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #347928;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hpclose-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  background-color: #0000003c;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.leaving {
+  margin-left: 3px;
+  width: 20px; /* Kích thước của logo */
+  height: 20px; /* Kích thước của logo */
+}
+
+.logout:hover {
+  font-size: 16px;
+}
+
+/* Search Result Box */
+.search-result-box {
+  position: absolute; /* 🌟 chuyển sang absolute */
+  top: 80%; /* 🌟 nằm ngay dưới search-bar */
+  left: 30%;
+  background-color: #f7f6bb90;
+  padding: 10px 20px;
+  border-radius: 0px 0px 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  width: 60%; /* cho khớp với ô search */
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+  z-index: 50;
+}
+
+
+.search-category-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #347928;
+}
+
+.search-learn-button {
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-learn-button:hover {
+  opacity: 0.85;
+}
+
+.search-area {
+  position: relative; /* 🌟 Bọc search-bar và suggestion vào chung 1 vùng */
+  flex: 1;
+  max-width: 400px;
+  width: 100%;
+}
